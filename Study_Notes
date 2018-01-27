@@ -1,0 +1,38 @@
+#2018-01-26
+####################################
+SHELL语句，如何判断变量是否为数字
+if [[ $var =~ ^[0-9]$ ]]
+SHELL语句，if中的正则表达式判断
+if [[ $var ==~ 'ERE' ]] 
+#####################################
+如何修改丢失root密码
+1进入grub选择页面 e (edit)
+2修改ro 为rw 后面填加init=/bin/sh ctrl+x
+3进入shell界面 echo "password" |passwd --stdin root
+4在selinux开启下 touch /.autorelabel
+5exec /sbin/init
+################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
