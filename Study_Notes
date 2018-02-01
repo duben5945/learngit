@@ -12,8 +12,17 @@ if [[ $var ==~ 'ERE' ]]
 4在selinux开启下 touch /.autorelabel
 5exec /sbin/init
 ################################################
-
-
+nmap 扫描工具
+nmap scan-type -option target
+-sT TCP connect()扫描
+-sS TCP SYN 扫描
+-sP Ping 扫描
+-sU UDP 扫描
+-sA ACK 扫描
+-O 获取远程主机操作类型
+-v verbose
+-p port 
+#################################################
 
 
 
