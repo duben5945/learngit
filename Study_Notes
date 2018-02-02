@@ -23,7 +23,28 @@ nmap scan-type -option target
 -v verbose
 -p port 
 #################################################
+mysqldump #logical backups
+mysqldump --result-file=dump.sql #windows 以ASCII格式创建输出
+select,show view,trigger,lock tables,--single-transaction 权限
+mysqldump db_name tbl_name >dump.sql
+mysqldump --databases db_name >dump.sql
+mysqldump --all-databases >dump.sql
+--add-drop-databases #DROP DATABASE 
+--databases #CREATE DATABASE
+--bind-address=ip_address #多个网络接口
+--compress -C #压缩
+--host=host_name -h host_name 
 
+#复制不同名数据库 不适用--databases
+mysqldump db1 > dump.sql
+mysqladmin create db2
+mysql db2 < dump.sql
+#控制处理存储的程序
+--events 转储事件计划程序事件
+--routines 转储存储过程和函数
+--triggers 转储表的触发器 (默认开启)
+--no-data 不转储表数据
+--no-create-info 仅包含表数据
 
 
 
